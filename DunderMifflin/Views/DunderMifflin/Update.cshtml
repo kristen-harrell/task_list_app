@@ -1,0 +1,21 @@
+﻿@model ToDo
+
+<h2>Update Task</h2>
+
+<form method="post">
+
+    <label>Name:</label>
+    <input type="text" name="Name" value="@Model.Name" /><br>
+    <label>Description:</label>
+    <input type="text" name="Description" value="@Model.Description" /><br>
+    <label>Due date currently set to: @Model.DueDate.ToShortDateString()</label><br>
+    Change date to: <input type="date" name="DueDate" value="@Model.DueDate" /><br>
+    <label>Completed:</label><br>
+    Yes: <input type="checkbox" name="Completed" value="true" /><br>
+    No: <input type="checkbox" name="Completed" value="false" /><br>
+    <br>
+    <input type="submit" />
+    <input hidden type="text" name="Email" value="@Model.Email" />
+
+
+</form>

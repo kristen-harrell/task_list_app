@@ -1,0 +1,11 @@
+﻿<h2>My Page</h2>
+
+<a asp-action="Create" asp-controller="DunderMifflin"><button>Create new task</button></a>
+<br>
+<form asp-action="MyTaskList" asp-controller="DunderMifflin" method="post">
+    <input hidden type="text" name="Email" value="@User.Identity.Name" />
+    <br>
+    <input type="submit" value="Show me my tasks" />
+</form>
+
+
